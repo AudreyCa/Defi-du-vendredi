@@ -1,0 +1,406 @@
+@font-face {font-family: 'Gotham'; src: url('Gotham-Font/GothamBold.ttf');}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gotham';
+    // background-color: black;
+    display: flex;
+    background-color:#1a1919;
+}
+
+//section de la navigation à gauche
+
+.navLeft {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+    min-width: 20vw;
+    position: sticky;
+    z-index: 10;
+    top:0;
+    left: 0;
+    bottom:0;
+    height: 100vh;
+        div {
+            display: flex;
+            align-items: center;
+            font-size: 10px;
+            margin-left: 15px;
+            margin-bottom: -5px;
+            margin: 10px 20px -5px 20px;
+            color:rgba(255, 255, 255, 0.572);
+            transition: .2s ease;
+                a {
+                    text-decoration: none;
+                    color:rgba(255, 255, 255, 0.572);
+                    font-size: .8em;
+                    transition: .2s ease;
+                    &:hover {
+                        color: white;
+                    }
+                }
+                i {
+                    font-size: 18px;
+                    margin-right: 10px;
+                    margin-bottom: 5px;
+                        &:hover {
+                            cursor:pointer;
+                        }
+                }
+            &:hover {
+                color: white;
+            }
+        }
+        div:nth-child(1) {
+            display: flex;
+            align-items: center;
+            margin: 15px;
+            margin-bottom: 15px;
+            font-size: 16px;
+                a {
+                    color:white;
+                }
+        }
+        div:nth-child(4) {
+            margin-bottom: 15px;
+        } 
+        div:nth-child(6) {
+            i {
+                color:rgba(158, 129, 224, 0.521);
+            }
+        }
+        div:nth-child(7) {
+            position: absolute;
+            bottom: 0;
+            display: block;
+            margin: 0 0 120px 20px;
+                a {
+                    color:white;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                a:nth-child(3) {
+                    display: flex;
+                    align-items: center;
+                        p{
+                            margin-right: 5px;
+                        }
+                        &:hover {
+                            text-decoration: none;
+                        }
+                }
+        }
+}
+
+
+// Section de la barre de navigation en haute
+.navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 80vw;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.579);
+        .arrow {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 30px;
+                i{
+                    font-size: 30px;
+                    margin: 5px;
+                    color: white;
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                }
+        }
+        .search {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-right: 20%;
+            margin-left: 5px;
+            width: 13em;
+            height: 20px;
+            background-color: rgb(81, 80, 80);
+            border-radius: 50px;
+            padding: 10px 15px;
+                i {
+                    margin-right: 10px;
+                }
+                input {
+                    background-color: rgb(81, 80, 80);
+                    box-shadow: none;
+                    border: none;
+                    &::placeholder {
+                        color: rgb(186, 177, 177);
+                    }
+                }
+        }
+        .cta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+                a {
+                    text-decoration: none;
+                    color: rgba(255, 255, 255, 0.774);
+                    margin-right: 30px;
+                    font-size: .9em;
+                        &:hover {
+                            transform: scale(1.05);
+                            color: white;
+                        }
+                }
+                button {
+                    border:none;
+                    color: black;
+                    background-color: white;
+                    border-radius: 20px;
+                    text-align: center;
+                    width: 130px; 
+                    height: 40px;
+                    font-family: 'Gotham';
+                    font-size: .9em;
+                    margin-right: 20px;
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                }
+        }
+}
+
+
+
+// Main avec les titre et les cards : le contenu
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    margin-left: 40px;
+        h3 {
+            margin-top: 50px;
+            font-size: 2em;
+            color: white;
+                &:hover {
+                    text-decoration: underline;
+                }
+        }
+        .cards,
+        .cards2,
+        .cards3,
+        .cards4 {
+            display: flex;
+            justify-content: space-evenly;
+                .card,
+                .card2,
+                .card3,
+                .card4 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: #201f1f;
+                    border-radius: 5px;
+                    max-height: 180px;
+                    max-width: 7.5em;
+                    display: flex;
+                    flex-direction: column;
+                    color: white;
+                    padding: 15px;
+                    position: relative;
+                    margin-right: 30px;
+                    transition: all .3s ease;
+                        img{
+                            position: absolute;
+                            max-height: 100px;
+                        }
+                        h6 {
+                            max-width: 100px;
+                            font-size: .8em;
+                            margin: 110px 0 0 0;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                        p {
+                            width: 100px;
+                            font-size: .7em;
+                            color: rgba(255, 255, 255, 0.582);
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                        .rondVert {
+                            position: absolute;
+                            right: 20%;
+                            bottom: 50%;
+                            background-color: rgb(80, 192, 80);
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            display: none;
+                                i {
+                                    position: absolute;
+                                    color: black;
+                                    font-size: 20px;
+                                    left: 35%;
+                                    bottom: 30%;
+                                }
+                        }
+                        &:hover {
+                            background-color: #312f2f;
+                        }
+                        &:hover .rondVert{
+                            display: block;
+                        }
+                }
+                .card4 {
+                    margin-bottom: 120px;
+                }
+        }
+}
+
+
+
+// Le footer avec le lecteur
+.footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+    width: 100vw;
+    height: 80px;
+    background-color: #1a1919;
+    border-top:1px solid rgb(53, 52, 52);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+        img {
+            max-height: 50px;
+        }
+        .titre{
+            color: white;
+            font-size: 12px;
+                p{
+                    margin: 5px 20px;
+                }
+                p:nth-child(1){
+                    font-size: 15px;
+                }
+        }
+        i {
+            color: rgba(255, 255, 255, 0.596);
+            &:hover {
+                color:white;
+                cursor: pointer;
+            }
+        }
+        .play {
+            max-width: 400px;
+            margin-right: 5%;
+        }
+        .fa-up-right-and-down-left-from-center {
+            margin-right: 10px;
+        }
+        &.active {
+            height: 30%;
+        }
+}
+
+
+
+
+//////////////////////////Page-rechercher///////////////////////////
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    h4 {
+        font-size: 20px;
+        color: white;
+        margin-top: 50px;
+    }
+    .cardsplaylists {
+        display: flex;
+        flex-wrap: wrap;
+            .cardPlaylist{
+                display: flex;
+                width: 120px;
+                height: 120px;
+                border-radius: 5px;
+                background-color: rgb(10, 124, 133);
+                margin-right: 20px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                cursor: pointer;
+                position: relative;
+                    p {
+                        color: white;
+                        font-size: 22px;
+                        z-index: 5;
+                        margin-left: 10px;
+                        text-overflow:clip;
+                        white-space: wrap;
+                        overflow: hidden;
+                    }
+                    img {
+                        width: 90px;
+                        height: 90px;
+                        transform: rotate(30deg);
+                        position: absolute;
+                        bottom: -10px;
+                        right: -15px;
+                        z-index: 2;
+                    }
+                    &:last-child {
+                        margin-bottom: 130px;
+                    }
+            }
+    }
+}
+
+
+//////////////////////////Page-gardLaPeche///////////////////////////
+.mainPeche {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-image: url('../images/cover4.jpg');
+    width: 100vw;
+    margin-left: 20%;
+    height: 70vh;
+    background-size: cover;
+    background-position: 0 500px;
+    position: sticky;
+    margin: 0;
+        h2 {
+            font-size: 5.5em;
+            color: white;
+            margin-top: 50px;
+            margin : 100px 0 20px 30px;
+        }
+        p {
+            color:rgb(207, 202, 202);
+            margin-left: 30px;
+                span {
+                    color: white;
+                }
+        }
+        .listeLecture {
+            background-color: #201f1f;
+                .icones{
+                    display: flex;
+                    margin-left: 30px;
+                    color: white;
+                    font-size: 40px;
+                        i {
+                            margin: 10px 20px;
+                        }
+                }
+        }
+}

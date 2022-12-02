@@ -1,0 +1,47 @@
+html,
+.main {
+    background-color: black;
+    max-width: 1025px;
+    max-height: 526px;
+}
+
+.back {
+    display: flex;
+    flex-direction: row;
+}
+
+.back img {
+    height: 0;
+}
+
+.bloc1 {
+    animation: animationBack 3s ease 0000ms forwards;
+}
+
+.bloc2 {
+    animation: animationBack 3s ease 0250ms forwards;
+}
+
+.bloc3 {
+    animation: animationBack 3s ease 0500ms forwards;
+}
+
+.bloc4 {
+    animation: animationBack 3s ease 1000ms forwards;
+}
+
+.bloc5 {
+    animation: animationBack 3s ease 1250ms forwards;
+}
+
+@keyframes animationBack {
+    0% {
+        height: 0;
+        transform: translateY(526px);
+    }
+  
+    100% {
+        height: 526px;
+        transform: translateY(0);
+    }
+}

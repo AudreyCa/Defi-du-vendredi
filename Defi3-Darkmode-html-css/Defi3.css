@@ -1,0 +1,118 @@
+html,
+body {
+    margin: 0;
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    transform: translateX(50%);
+    text-align: center;
+    max-width: 40vw;
+    transition-delay: .3s;
+}
+
+.container_bleu {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    background-color: rgb(56, 135, 238);
+    border-radius: 50%;
+    bottom: 3%;
+    left: 3%;
+    overflow: hidden;
+}
+
+.jaune,
+.lune,
+.sombre {
+    position: absolute;
+}
+
+label {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background-color: rgb(235, 178, 74);
+    border-radius: 50%;
+    top: 7.5px;
+    left: 7.5px;
+}
+
+input {
+    display: none;
+}
+
+.nuage {
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.897);
+    border-radius: 50%;
+    top: 30%;
+    right: -40%;
+    animation: nuage 10s linear infinite;
+}
+
+.deux {
+    top: 60%;
+    right: -70%;
+}
+
+@keyframes nuage {
+    to {
+        transform: translateX(-400%);
+    }
+}
+
+#jaune:checked~main .text {
+    color: white
+}
+
+#jaune:checked~main .nuage {
+    display: none;
+}
+
+
+#jaune:checked+main .container_bleu {
+    background-color: rgb(5, 16, 31);
+}
+
+.lune {
+    width: 80px;
+    height: 80px;
+    top: -70px;
+    left: -45px;
+    border-radius: 50%;
+    background-color: rgb(5, 16, 31);
+    transition: 1s;
+}
+
+#jaune:checked+main .lune {
+    transform: translate(20px, 45px);
+}
+
+.sombre {
+    position: ;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.801);
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+#jaune:checked+main .sombre {
+    animation: modeDark .4s ease-in forwards;
+    border-radius: none;
+}
+
+@keyframes modeDark {
+    100% {
+        transform: scale(100);
+        width: 100%;
+        min-height: 10vh;
+        visibility: visible;
+    }
+}

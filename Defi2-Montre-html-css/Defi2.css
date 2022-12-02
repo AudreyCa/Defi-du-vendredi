@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.montre {
+    width: 250px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+margin: 0 5%;
+}
+
+.bleue {
+    background-image: url(watch_bleu.svg);
+}
+
+.verte {
+    background-image: url(watch_verte.svg);
+}
+
+.heure {
+    width: 50px;
+    height: 4px;
+    background-color: coral;
+    position: absolute;
+    animation: animationMontre 120s linear infinite;
+}
+
+.minute {
+    background-color: white;
+    border: none;
+    width: 77px;
+    height: 3px;
+    position: absolute;
+    animation: animationMontre 10s linear infinite;
+}
+
+.minute,
+.heure {
+    left: 50%;
+    bottom: 50%;
+    transform-origin: left;
+}
+
+@keyframes animationMontre {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.centre {
+    background-color: white;
+    border: solid 4px coral;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    bottom: 48.5%;
+    left: 47%;
+}
