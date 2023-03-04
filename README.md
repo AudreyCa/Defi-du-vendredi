@@ -1,8 +1,23 @@
-# Défis du vendredi
+# Défi du vendredi
 
-Ce dépôt regroupe les défis du vendredi matin pendant ma formation de CDA chez Digifab.
+This project was carried out during my training as an Application Designer Developer at Digifab.
 
-Le but est simple : **réaliser un défi en 4 heures**.
+This repository brings together the Friday morning challenges during my CDA training at Digifab.
 
-Les défis 1 à 4 (inclus) sont réalisés en HTML et CSS.
-Les défis 5 et 6 ont étés réalisés en HTML, CSS et JS.
+---
+
+## Technologies used
+
+---
+
+Langage : 
+
+Challenges 1 to 4 (inclusive) are made in HTML and CSS. Challenges 5 and 6 were made in HTML, CSS and JS.
+
+IDE : Visual Studio Code
+
+### Objective
+
+---
+
+The goal is simple: complete a challenge in 4 hours, alone.
